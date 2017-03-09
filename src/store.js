@@ -18,7 +18,7 @@ define(function(require, exports, module) {
 	store.saveState = function (state, obj) {
 		localStorage.setItem("state-" + state, JSON.stringify(obj));
 	};
-	
+
 	/**
 	 * getStage()  returns the state object, but also removes it.
 	 * @type {Object}
@@ -42,11 +42,11 @@ define(function(require, exports, module) {
 
 		// console.log("LOG(), Arguments", arguments, msg)
 		if (arguments.length > 1) {
-			console.log(arguments);	
+			//console.log(arguments);
 		} else {
 			console.log(msg);
 		}
-		
+
 	};
 
 
@@ -68,7 +68,7 @@ define(function(require, exports, module) {
 	 * are expired, and the ones that do not meet a scopes requirement.
 	 */
 	store.filterTokens = function(tokens, scopes) {
-		var i, j, 
+		var i, j,
 			result = [],
 			now = utils.epoch(),
 			usethis;
